@@ -14,8 +14,11 @@ python Combine_I1_R1_R2.py “FastqFileName_I1_001.fastq.gz" “SampleName_R1_00
 3: The sam file generated after mapping is converted to a bam file then parsed using the following script. The script parses through the bam file using a samtools view pipe.
 
 Usage: 
+
 •	hisat2 -x indexed genome - S SampleName _R1_001.fastq.gz -S SampleName.sam --no-unal -p (user input)--max-intronlen (user input) &> SampleName _log.txt
+
 •	samtools view -b -S -o SampleName.bam SampleName.sam
+
 •	samtools view SampleName.bam | python Parsing_bam_faster_v2.py
 
 
