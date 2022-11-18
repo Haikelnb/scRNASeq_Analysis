@@ -40,7 +40,7 @@ with gzip.open(I1_filepath, mode='rt') as fp1:  # the rt mode is for reading gzi
                             # print(matched_name, R1_line)
                             R1_seq = next(fp2, '').strip()
                             BC = R1_seq[0:15]
-                            UMI = R1_seq[16:25]
+                            UMI = R1_seq[16:27]
                             break
 
                     for R2_line in fp3:
